@@ -1,73 +1,89 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-  <LinearLayout
-    android:orientation="vertical"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    <TextView
-      android:id="@+id/versionLabel"
-      android:text="Version"
-      android:textSize="14dp"
-      android:paddingTop="12dp"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"/>
-    <XamdroidCustomComponents.CustomComponents.VersionView
-      android:textAppearance="?android:attr/textAppearanceLarge"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:id="@+id/textView1"
-      android:background="@android:color/holo_blue_dark"
-      android:textSize="28dp" />
-
-    <TextView
-      android:id="@+id/widthLabel"
-      android:text="Height:"
-      android:textSize="14dp"
-      android:paddingTop="12dp"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"/>
-    <XamdroidCustomComponents.CustomComponents.LengthPicker
-      android:id="@+id/widthPicker"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content" />
-
-    <TextView
-      android:id="@+id/lengthLabel"
-      android:text="Length:"
-      android:textSize="14dp"
-      android:paddingTop="12dp"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"/>
-    <XamdroidCustomComponents.CustomComponents.LengthPicker
-      android:id="@+id/lengthPicker"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content" />
-
-    <TextView
-      android:id="@+id/areaLabel"
-      android:text="Area:"
-      android:textSize="14dp"
-      android:paddingTop="12dp"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"/>
-    <TextView
-      android:id="@+id/areaValue"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"/>
-
-    <XamdroidCustomComponents.CustomComponents.SquareView
-      android:background="#c9f"
-      android:layout_width="match_parent"
-      android:layout_height="match_parent"
-      android:layout_gravity="center"
-      android:layout_margin="30dp"/>
-
-    <XamdroidCustomComponents.CustomComponents.PhotoSpiral
-      android:layout_width="match_parent"
-      android:layout_height="match_parent"
-      android:layout_margin="5dp"/>
-  </LinearLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <Button
+            android:text="to recycler views"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/button1" />
+        <TextView
+            android:id="@+id/versionLabel"
+            android:text="Version"
+            android:textSize="14dp"
+            android:paddingTop="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <XamdroidCustomComponents.CustomComponents.VersionView
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView1"
+            android:background="@android:color/holo_blue_dark"
+            android:textSize="28dp" />
+        <TextView
+            android:id="@+id/widthLabel"
+            android:text="Height:"
+            android:textSize="14dp"
+            android:paddingTop="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <XamdroidCustomComponents.CustomComponents.LengthPicker
+            android:id="@+id/widthPicker"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/lengthLabel"
+            android:text="Length:"
+            android:textSize="14dp"
+            android:paddingTop="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <XamdroidCustomComponents.CustomComponents.LengthPicker
+            android:id="@+id/lengthPicker"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/areaLabel"
+            android:text="Area:"
+            android:textSize="14dp"
+            android:paddingTop="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/areaValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <XamdroidCustomComponents.CustomComponents.SquareView
+            android:background="#c9f"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_margin="30dp" />
+        <XamdroidCustomComponents.CustomComponents.PhotoSpiral
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp" />
+        <XamdroidCustomComponents.CustomComponents.Pizza
+            android:layout_width="240dp"
+            android:layout_height="240dp"
+            android:layout_margin="8dp"
+            android:layout_gravity="center"
+            app:color="#ff0"
+            app:pieces="9" />
+        <XamdroidCustomComponents.CustomComponents.Pizza
+            android:layout_width="280dp"
+            android:layout_height="280dp"
+            android:layout_margin="8dp"
+            android:layout_gravity="center"
+            app:color="#225"
+            app:pieces="7"
+            app:stroke_width="7dp" />
+    </LinearLayout>
 </ScrollView>

@@ -22,10 +22,7 @@ namespace XamdroidCustomComponents
             _widthPicker = FindViewById(Resource.Id.widthPicker) as LengthPicker;
             _lengthPicker = FindViewById(Resource.Id.lengthPicker) as LengthPicker;
             _areaValue = FindViewById(Resource.Id.areaValue) as TextView;
-
-            // 1. Listener via class
-            // var onAreaValueChange = new OnChangeListener(_lengthPicker, _widthPicker, _areaValue);
-
+            
             // 2. Listener via event
             _widthPicker.OnValueChanged += new LengthPicker.OnValueChangeHandler(picker_OnValueChanged);
             _lengthPicker.OnValueChanged += new LengthPicker.OnValueChangeHandler(picker_OnValueChanged);
@@ -47,27 +44,6 @@ namespace XamdroidCustomComponents
             var field = _widthPicker.NumberInInches * _lengthPicker.NumberInInches;
             _areaValue.Text = $"{field} Zoll^2";
         }
-
-        // 1. Listener via class
-        //public class OnChangeListener : LengthPicker.IOnChangeListener
-        //{
-        //    private LengthPicker _widthPicker;
-        //    private LengthPicker _lengthPicker;
-        //    private TextView _areaValue;
-
-        //    public OnChangeListener(LengthPicker widthPicker, LengthPicker lengthPicker, TextView areaValue)
-        //    {
-        //        _widthPicker = widthPicker;
-        //        _lengthPicker = lengthPicker;
-        //        _areaValue = areaValue;
-        //    }
-
-        //    public void OnChange(int length)
-        //    {
-        //        var field = _widthPicker.NumberInInches*_lengthPicker.NumberInInches;
-        //        _areaValue.Text = $"{field} Zoll^2";
-        //    }
-        //}
     }
 }
 

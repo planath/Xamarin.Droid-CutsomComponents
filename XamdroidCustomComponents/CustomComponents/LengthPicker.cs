@@ -6,7 +6,6 @@ using Android.Runtime;
 using Android.Util;
 using Android.Views;
 using Android.Widget;
-using Java.Security;
 
 namespace XamdroidCustomComponents.CustomComponents
 {
@@ -46,9 +45,7 @@ namespace XamdroidCustomComponents.CustomComponents
         }
         #endregion
         public int NumberInInches { get; private set; }
-        // 1. Listener via class
-        public IOnChangeListener OnChangeListener { get; set; }
-        // 2. Listener via event
+        // Listener via event
         public delegate void OnValueChangeHandler(object myObject, LengthPickerArgs myArgs);
         public event OnValueChangeHandler OnValueChanged;
 
@@ -136,10 +133,6 @@ namespace XamdroidCustomComponents.CustomComponents
 
             _textView.Text = textViewText;
             _minusButton.Enabled = NumberInInches > 0;
-        }
-        public interface IOnChangeListener
-        {
-            void OnChange(int length);
         }
     }
 }
